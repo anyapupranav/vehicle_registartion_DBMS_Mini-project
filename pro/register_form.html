@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #34495e;
+}
+.box{
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #191919;
+  text-align: center;
+}
+.box h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.box input[type = "text"],.box input[type = "password"],.box input[type = "tel"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.box input[type = "text"]:focus,.box input[type = "password"]:focus,.box input[type = "tel"]:focus{
+  width: 280px;
+  border-color: #2ecc71;
+}
+.box input[type = "submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.box input[type = "submit"]:hover{
+  background: #2ecc71;
+}
+#gender {
+border-radius: 15px;
+width:100px;
+}
+
+img {
+  margin: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+<form class="box" action="register.php" method="post">
+    <img src="/pro/img/img_avatar.png" alt="Avatar">
+    <p style="color:white;" style="text-align:center" font-family = "Arial">SIGN UP</p>   
+    <hr>
+    <input type="text" placeholder="First Name" name="firstname" required>
+    <input type="text" placeholder="Last Name" name="lastname" required>
+    <input type="text" placeholder="UserName" name="username" required>
+    <input type="text" placeholder="example@email.com" name="email" required>
+    <input type="text" placeholder="Aadhaar number" name="aadhaar" required>
+    <input type="password" placeholder="Password" name="password" required>
+    <input type="tel" name="mobile" placeholder="mobile" pattern="[0-9]{10}" required>
+    <label for="Gender" style="color:white;">Select Gender :</label>
+    <select name="gender" id="gender">
+    <option value="male">MALE</option>
+    <option value="female">FEMALE</option>
+    <option value="other">OTHER</option>
+    </select>
+    <hr>
+    <p style="color:white;">By creating an account you agree to our <a style="color:red;" href="#">Terms & Privacy</a>.</p>
+    <input type="submit" name="" value="Register">
+    <p style="color:white;">Already have an account? <a style="color:red;" href="login.php">Sign in</a>.</p>
+</form>
+</body>
+</html>
